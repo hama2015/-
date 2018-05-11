@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>微信打开APP</title>
+		<meta name="keywords" content="移动学院" />
+		<meta name="description" content="欢迎学习" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="format-detection" content="telephone=no,address=no,email=no" />
+		<meta name="mobileOptimized" content="width" />
+		<meta name="handheldFriendly" content="true" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<style>
+			body{ text-align: center;}
+			.i_text{margin-top: 46px;}
+		</style>
+	</head>
+	<body>		
+		<div class="i_text"><a href="javascript:gotodownload2()">打开移动APP</a>
+		<script>
+		var userAgent = navigator.userAgent.toLowerCase();
+
+		function dl_apk(){
+			// alert('这里是下载逻辑');
+			window.location="http://android.myapp.com/myapp/detail.htm?apkName=com.peaktele.mobile";
+			return false;
+		}
+
+		function gotodownload2() {
+			if (/android/.test(userAgent)) {
+				if (userAgent.match(/micromessenger|qq|mqqbrowser/)) {
+					window.location = "https://a.app.qq.com/o/simple.jsp?pkgname=com.peaktele.mobile";
+					return false;
+				} else {
+					window.location = "yikao://index";
+					// alert('这里是吊起逻辑，3秒后执行下载逻辑');
+					setTimeout(dl_apk, 3000);
+					return false;
+				}
+			}
+			if (/iphone|ipad|ipod/.test(userAgent)) {
+				if (userAgent.match(/micromessenger|qq|mqqbrowser/)) {
+					window.location = "https://a.app.qq.com/o/simple.jsp?pkgname=com.peaktele.mobile";
+					return false;
+				} else {
+					window.location = "https://itunes.apple.com/cn/app/id952704104?mt=8&at=1001lbb6&mt=1&app=music";
+					return false;
+				}
+			}
+			window.location="http://android.myapp.com/myapp/detail.htm?apkName=com.peaktele.mobile";
+			return false;
+		}
+		</script>
+		
+	</body>
+
+</html>
