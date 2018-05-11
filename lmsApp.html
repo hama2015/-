@@ -17,7 +17,7 @@
 		</style>
 	</head>
 	<body>		
-		<div class="i_text"><a href="javascript:downlmsApp()">打开移动APP</a>
+		<div class="i_text"><a href="peak_app://www.peaktele.com/lmsApp/20180511">打开移动APP</a>
 		<script>
 		var userAgent = navigator.userAgent.toLowerCase();
 		function dl_apk(){
@@ -27,8 +27,6 @@
 		}
 		function downlmsApp() {
 			if (/android/.test(userAgent)) {
-        window.location = "peak_app://www.peaktele.com/lmsApp/20180511";
-        return ;
 				if (userAgent.match(/micromessenger|qq|mqqbrowser/)) {
 					window.location = "https://a.app.qq.com/o/simple.jsp?pkgname=com.peaktele.mobile";
 					return false;
